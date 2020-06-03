@@ -1,3 +1,12 @@
+DROP TABLE IF EXISTS parties;
+DROP TABLE IF EXISTS candidates;
+
+CREATE TABLE parties (
+   id INTEGER PRIMARY KEY,
+   name VARCHAR(50) NOT NULL,
+   description TEST
+);
+
 CREATE TABLE candidates (
    id INTEGER PRIMARY KEY,
    first_name VARCHAR(30) NOT NULL,
@@ -7,8 +16,3 @@ CREATE TABLE candidates (
    CONSTRAINT fk_party FOREIGN KEY (party_id) REFERENCES parties(id) ON DELETE SET NULL
 );
 
-CREATE TABLE parties (
-   id INTEGER PRIMARY KEY,
-   name VARCHAR(50) NOT NULL,
-   description TEST
-);
